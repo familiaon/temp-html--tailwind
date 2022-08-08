@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,700;1,400;1,700&amp;display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+      '2xl': {'max': '1535px'},
+      // => @media (max-width: 1535px) { ... }
+
+      'xl': {'max': '1279px'},
+      // => @media (max-width: 1279px) { ... }
+
+      'lg': {'max': '1023px'},
+      // => @media (max-width: 1023px) { ... }
+
+      'md': {'max': '767px'},
+      // => @media (max-width: 767px) { ... }
+
+      'sm': {'max': '639px'},
+      // => @media (max-width: 639px) { ... }
+    },
+        extend: {
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif']
+          },
+          colors: {
+            clifford: '#da373d',
+            bgBody: '#212529',
+            divider: '#363739',
+            grayC1: '#c1c1c1',
+            gray81: '#868686'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-[#121212] box-border font-inter text-white text-sm">
+  <div class="container mx-auto bg-[#1e1e1e] rounded-md">
+
+    <div class="w-full border-b border-divider p-6">
+      <h1 class="text-white text-lg leading-10">Área do Aluno</h1>
+    </div>
+
+    <div class="w-full border-b border-divider p-6">
+      <div class="flex">
+        <div class="flex-auto w-36 md:w-0"></div>
+        <div class="flex-auto w-64 md:w-full">
+          <div class="flex flex-row gap-7 md:flex-wrap">
+            <div class="flex flex-col">
+              <label class="mb-2 pl-1" for="">Título das páginas</label>
+              <input
+                class="bg-[#121212] outline-none border border-[#121212] rounded py-2 px-3 text-white-700 focus:border-pink-500 w-52"
+                type="text">
+            </div>
+            <div class="flex flex-col w-full">
+              <label class="mb-2 pl-1" for="">Cor de destaque</label>
+              <input
+                class="bg-[#121212] outline-none border border-[#121212] rounded py-2 px-3 text-white-700 focus:border-pink-500 w-52"
+                type="text">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="w-full border-b border-divider p-6">
+      <div class="flex md:flex-wrap">
+        <h5 class="flex-auto w-36 font-bold text-grayC1 text-base">Layout</h5>
+        <div class="flex-auto w-64">
+          <div class="flex flex-row gap-10 md:flex-wrap">
+            <div class="flex flex-col">
+              <label class="mb-2" for="">Dark Mode</label>
+              <div class="flex ml-10">
+                <div class="form-check form-switch w-full">
+                  <input
+                    class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-700 focus:outline-none cursor-pointer shadow-sm"
+                    type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                  <!-- <input class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-600 focus:outline-none cursor-pointer shadow-sm" type="checkbox" role="switch" id="flexSwitchCheckDefault"> -->
+                </div>
+              </div>
+              <p class="text-gray81 mt-3 w-48">Inverte as cores da área do usuário e painel de login</p>
+            </div>
+            <div class="flex flex-col w-full">
+              <label class="mb-2 pl-1" for="">Tema</label>
+              <select
+                class="bg-[#121212] text-grayC1 outline-none border border-[#121212] rounded py-2 px-3  focus:border-pink-500 w-full"
+                name="theme">
+                <option class="text-grayC1" value="Modelo NETFLIX">Modelo NETFLIX</option>
+                <option class="text-grayC1" value="Modelo Educacional">Modelo Educacional</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
