@@ -11,21 +11,21 @@
     tailwind.config = {
       theme: {
         screens: {
-      '2xl': {'max': '1535px'},
-      // => @media (max-width: 1535px) { ... }
+          '2xl': { 'max': '1535px' },
+          // => @media (max-width: 1535px) { ... }
 
-      'xl': {'max': '1279px'},
-      // => @media (max-width: 1279px) { ... }
+          'xl': { 'max': '1279px' },
+          // => @media (max-width: 1279px) { ... }
 
-      'lg': {'max': '1023px'},
-      // => @media (max-width: 1023px) { ... }
+          'lg': { 'max': '1023px' },
+          // => @media (max-width: 1023px) { ... }
 
-      'md': {'max': '767px'},
-      // => @media (max-width: 767px) { ... }
+          'md': { 'max': '767px' },
+          // => @media (max-width: 767px) { ... }
 
-      'sm': {'max': '639px'},
-      // => @media (max-width: 639px) { ... }
-    },
+          'sm': { 'max': '639px' },
+          // => @media (max-width: 639px) { ... }
+        },
         extend: {
           fontFamily: {
             'inter': ['Inter', 'sans-serif']
@@ -35,7 +35,8 @@
             bgBody: '#212529',
             divider: '#363739',
             grayC1: '#c1c1c1',
-            gray81: '#868686'
+            gray81: '#868686',
+            pink1: '#ff005c'
           }
         }
       }
@@ -54,17 +55,17 @@
       <div class="flex">
         <div class="flex-auto w-36 md:w-0"></div>
         <div class="flex-auto w-64 md:w-full">
-          <div class="flex flex-row gap-7 md:flex-wrap">
+          <div class="flex flex-row gap-7 md:flex-wrap md:items-center md:justify-center">
             <div class="flex flex-col">
-              <label class="mb-2 pl-1" for="">Título das páginas</label>
+              <label class="mb-2" for="">Título das páginas</label>
               <input
-                class="bg-[#121212] outline-none border border-[#121212] rounded py-2 px-3 text-white-700 focus:border-pink-500 w-52"
+                class="bg-[#121212] outline-none border border-[#121212] rounded py-2 px-3 text-white-700 focus:border-pink1 w-52"
                 type="text">
             </div>
-            <div class="flex flex-col w-full">
-              <label class="mb-2 pl-1" for="">Cor de destaque</label>
+            <div class="flex flex-col">
+              <label class="mb-2" for="">Cor de destaque</label>
               <input
-                class="bg-[#121212] outline-none border border-[#121212] rounded py-2 px-3 text-white-700 focus:border-pink-500 w-52"
+                class="bg-[#121212] outline-none border border-[#121212] rounded py-2 px-3 text-white-700 focus:border-pink1 w-52"
                 type="text">
             </div>
           </div>
@@ -79,7 +80,7 @@
         <div class="flex-auto w-64">
           <div class="flex flex-row gap-10 md:flex-wrap">
             <div class="flex flex-col">
-              <label class="mb-2" for="">Dark Mode</label>
+              <label class="mb-2 md:mt-3" for="">Dark Mode</label>
               <div class="flex ml-10">
                 <div class="form-check form-switch w-full">
                   <input
@@ -91,9 +92,9 @@
               <p class="text-gray81 mt-3 w-48">Inverte as cores da área do usuário e painel de login</p>
             </div>
             <div class="flex flex-col w-full">
-              <label class="mb-2 pl-1" for="">Tema</label>
+              <label class="mb-2" for="">Tema</label>
               <select
-                class="bg-[#121212] text-grayC1 outline-none border border-[#121212] rounded py-2 px-3  focus:border-pink-500 w-full"
+                class="bg-[#121212] text-grayC1 outline-none border border-[#121212] rounded py-2 px-3  focus:border-pink1 w-full"
                 name="theme">
                 <option class="text-grayC1" value="Modelo NETFLIX">Modelo NETFLIX</option>
                 <option class="text-grayC1" value="Modelo Educacional">Modelo Educacional</option>
@@ -103,6 +104,111 @@
         </div>
       </div>
     </div>
+
+    <div class="w-full border-b border-divider p-6">
+      <div class="flex md:flex-wrap">
+        <div class="flex-auto">
+          <h5 class="w-36 font-bold text-grayC1 text-base">Rodapé</h5>
+          <div class="form-check form-switch w-full">
+            <p class="mt-4">Exibir?</p>
+            <input
+              class="form-check-input appearance-none w-9 mt-1 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-700 focus:outline-none cursor-pointer shadow-sm"
+              type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+            <!-- <input class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-600 focus:outline-none cursor-pointer shadow-sm" type="checkbox" role="switch" id="flexSwitchCheckDefault"> -->
+          </div>
+        </div>
+        <div class="flex-auto w-64">
+          <div class="flex flex-row gap-10 md:flex-wrap">
+            <div class="flex flex-col">
+              <label class="mb-2 md:mt-10 w-48" for="">Exibir Mensagem</label>
+              <div class="flex ml-10">
+                <div class="form-check form-switch w-full">
+                  <input
+                    class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-700 focus:outline-none cursor-pointer shadow-sm"
+                    type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                  <!-- <input class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-600 focus:outline-none cursor-pointer shadow-sm" type="checkbox" role="switch" id="flexSwitchCheckDefault"> -->
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col w-full">
+              <label class="mb-2" for="">Mensagem</label>
+              <input type="text" placeholder="Insira a mensagem"
+                class="bg-[#121212] placeholder-gray81 text-grayC1 outline-none border border-[#121212] rounded py-2 px-3  focus:border-pink1 w-full"
+                name="theme">
+            </div>
+          </div>
+
+          <!-- <div class="flex flex-row gap-10 md:flex-wrap"> -->
+          <div class="flex flex-col mt-5 md:mt-0">
+            <label class="mb-2 md:mt-10 w-48" for="">Exibir Disclaimer</label>
+            <div class="flex ml-10">
+              <div class="form-check form-switch w-full">
+                <input
+                  class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-700 focus:outline-none cursor-pointer shadow-sm"
+                  type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                <!-- <input class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-600 focus:outline-none cursor-pointer shadow-sm" type="checkbox" role="switch" id="flexSwitchCheckDefault"> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-row gap-10 md:flex-wrap">
+            <div class="flex flex-col mt-5">
+              <label class="mb-2 md:mt-5 w-48" for="">Exibir Termos de Uso</label>
+              <div class="flex ml-10">
+                <div class="form-check form-switch w-full">
+                  <input
+                    class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-700 focus:outline-none cursor-pointer shadow-sm"
+                    type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                  <!-- <input class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-600 focus:outline-none cursor-pointer shadow-sm" type="checkbox" role="switch" id="flexSwitchCheckDefault"> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col w-full md:mt-0 2xl:mt-5">
+              <label class="mb-2" for="">URL - Termos de Uso</label>
+              <input type="text" placeholder="Insira a URL com https://"
+                class="bg-[#121212] placeholder-gray81 text-grayC1 outline-none border border-[#121212] rounded py-2 px-3  focus:border-pink1 w-full"
+                name="theme">
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full border-b border-divider p-6">
+      <div class="flex md:flex-wrap">
+        <h5 class="flex-auto w-36 font-bold text-grayC1 text-base">Imagens</h5>
+        <div class="flex-auto w-64">
+          <div class="flex flex-row gap-10 lg:flex-wrap">
+            <div class="flex flex-col">
+              <label class="mb-2 md:mt-3" for="">Logo</label>
+              <div class="flex mt-3">
+                <div class="flex-col">
+                  <img src="" alt="">
+                  <div class="flex gap-2">
+                    <button class="btn border border-1 border-solid rounded-full border-pink1 py-2 px-12 text-pink1" type="button">Enviar</button>
+                    <button class="btn border border-1 border-solid rounded-full border-[#9ca5a9] py-2 px-10 text-[#9ca5a9]" type="button">Remover</button>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray81 mt-3 w-52">Opte por uma leitura horizontal do seu Logo, remova margens transparentes. Sua aplicação final terá 30px de altura.</p>
+            </div>
+            <div class="flex flex-col">
+              <label class="mb-2" for="">Ícone de Favorito</label>
+              <button class="btn border border-1 border-solid rounded-full border-pink1 py-2 px-3 text-pink1 " type="button">Enviar</button>
+              <p class="text-gray81 mt-3">PNG - 150x150 - até 100kb</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
 
   </div>
 </body>
