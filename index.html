@@ -77,15 +77,18 @@
     <div class="w-full border-b border-divider p-6">
       <div class="flex flex-wrap">
         <h5 class="flex-1 font-bold text-grayC1 text-base">Layout</h5>
-        <div class="flex-auto w-72">
+        <div class="flex-auto w-72 sm:w-full">
           <div class="flex flex-row gap-10 md:flex-wrap">
             <div class="flex flex-col">
               <label class="mb-2 md:mt-3" for="">Dark Mode</label>
               <div class="flex ml-10">
                 <div class="form-check form-switch w-full">
-                  <input
+                  <label class="switch switch-reverse mb-0">
+                    <input
                     class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-700 focus:outline-none cursor-pointer shadow-sm"
                     type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                    <span class="slider round"></span>
+                    </label>
                   <!-- <input class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-600 focus:outline-none cursor-pointer shadow-sm" type="checkbox" role="switch" id="flexSwitchCheckDefault"> -->
                 </div>
               </div>
@@ -117,7 +120,7 @@
             <!-- <input class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-600 focus:outline-none cursor-pointer shadow-sm" type="checkbox" role="switch" id="flexSwitchCheckDefault"> -->
           </div>
         </div>
-        <div class="flex-auto w-72">
+        <div class="flex-auto w-72 sm:w-full">
           <div class="flex flex-row gap-10 md:flex-wrap">
             <div class="flex flex-col">
               <label class="mb-2 md:mt-10 w-48" for="">Exibir Mensagem</label>
@@ -181,7 +184,7 @@
     <div class="w-full p-6">
       <div class="flex md:flex-wrap">
         <h5 class="flex-1 font-bold text-grayC1 text-base">Imagens</h5>
-        <div class="flex-auto w-72">
+        <div class="flex-auto w-72 sm:w-full">
           <div class="flex flex-row gap-10 lg:flex-wrap">
             <div class="flex flex-col">
               <label class="mb-2 md:mt-3" for="">Logo</label>
@@ -249,7 +252,7 @@
           <h5 class="flex-1 font-bold text-grayC1 text-base">Formulário</h5>
         <!-- </div> -->
 
-        <div class="flex-auto w-72 flex flex-row flex-wrap gap-5 md:mt-3">
+        <div class="flex-auto w-72 sm:w-full flex flex-row flex-wrap gap-5 md:mt-3">
           <div class="flex flex-col">
             <label class="mb-2" for="">Posição</label>
             <select
@@ -422,7 +425,7 @@
               </div>
             <!-- </div> -->
         </div>
-        <div class="flex-auto w-72 flex md:flex-wrap flex-row gap-8 md:mt-5">
+        <div class="flex-auto sm:w-full w-72 flex md:flex-wrap flex-row gap-8 md:mt-5">
           <div class="w-32 flex flex-col">
             <label class="mb-2" for="">Logo</label>
             <button class="btn border border-1 border-solid rounded-full border-pink1 py-2 px-3 text-pink1 mt-3" type="button">Enviar</button>
@@ -447,10 +450,10 @@
     </div>
 
     <div class="w-full p-6">
-      <div class="flex">
+      <div class="flex flex-wrap">
         <div class="flex-1 w-8/12">
               <div class="flex flex-col">
-                <p class="text-gray81 mt-3 w-8/12">
+                <p class="text-gray81 mt-3 w-8/12 md:w-full">
                   Para ativar o aplicativo PWA da sua Cademí, basta enviar uma imagem no campo ao lado.
                   <br>
                   <br>
@@ -458,9 +461,9 @@
                 </p>
               </div>
         </div>
-        <div class="flex-auto w-72 flex md:flex-wrap flex-row gap-8">
+        <div class="flex-auto w-72 sm:w-full flex md:flex-wrap flex-row gap-8 md:mt-10">
           <div class="flex flex-col">
-            <label class="mb-5" for="">Título de Aplicativo</label>
+            <label class="mb-2 md:mt-5" for="">Título de Aplicativo</label>
               <input
                 class="bg-[#121212] outline-none border border-[#121212] rounded py-2 px-3 text-white-700 focus:border-pink1 w-52"
                 type="text">
@@ -483,17 +486,17 @@
     </div>
 
     <div class="w-full p-6">
-      <div class="flex">
+      <div class="flex flex-wrap">
         <div class="flex-1">
               <div class="flex flex-col">
-                <p class="text-gray81 mt-3 w-8/12">
+                <p class="text-gray81 mt-3 w-8/12 md:w-full">
                   Essas são as informações exibidas quando alguém inserir o link da sua plataforma Cademí em uma rede social ou no Whatsapp
                 </p>
               </div>
         </div>
-        <div class="flex-auto w-72 flex flex-wrap flex-row gap-8">
+        <div class="flex-auto w-72 md:w-full flex flex-wrap flex-row gap-8">
           <div class="flex flex-col">
-            <label class="mb-2" for="">Título</label>
+            <label class="mb-2 md:mt-5" for="">Título</label>
               <input
                 class="bg-[#121212] outline-none border border-[#121212] rounded py-2 px-3 text-white-700 focus:border-pink1 w-52"
                 type="text">
