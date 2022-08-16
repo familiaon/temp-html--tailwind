@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,700;1,400;1,700&amp;display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * {
+      font-size: 100%;
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          '2xl': { 'max': '1535px' },
+          // => @media (max-width: 1535px) { ... }
+
+          'xl': { 'max': '1279px' },
+          // => @media (max-width: 1279px) { ... }
+
+          'lg': { 'max': '1023px' },
+          // => @media (max-width: 1023px) { ... }
+
+          'md': { 'max': '767px' },
+          // => @media (max-width: 767px) { ... }
+
+          'sm': { 'max': '639px' },
+          // => @media (max-width: 639px) { ... }
+        },
+        extend: {
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif']
+          },
+          colors: {
+            clifford: '#da373d',
+            bgBody: '#212529',
+            divider: '#363739',
+            grayC1: '#c1c1c1',
+            gray81: '#868686',
+            pink1: '#ff005c'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-[#121212] box-border font-inter text-white text-sm px-10 md:px-0 py-5">
+  <div class="container mx-auto bg-[#1e1e1e] rounded-md">
+
+    <div class="w-full border-b border-divider p-6">
+      <h1 class="text-white text-lg leading-10">Configuração - Kiwify</h1>
+    </div>
+
+    <div class="w-full p-6">
+      <div class="flex flex-wrap">
+        <div class="flex-1 md:w-full text-center my-auto">
+          <div class="bg-[#484c4e] rounded py-10 w-36 mx-auto">
+            <img class="mx-auto" src="https://familiaon.cademi.com.br/assets/icons/kiwify.png" alt="">
+          </div>
+          <p class="text-grayC1 text-base mt-3 mb-5">Dúvidas? Veja o tutorial</p>
+          <button class="btn border border-1 border-solid rounded-full border-pink1 py-2 px-12 text-pink1"
+                      type="button">Configurando - Kiwify -></button>
+        </div>
+        <div class="flex-auto w-72 md:w-full md:mt-7">
+
+          <div class="flex flex-row gap-5">
+            <div class="flex-1 flex flex-col">
+              <label class="mb-2" for="">Nome da Entrega</label>
+              <input
+                class="bg-[#121212] h-11 outline-none border border-[#121212] rounded py-2 px-3 text-white-700 focus:border-pink1 w-full"
+                type="text">
+                <p class="text-gray81 mt-3 mb-5 text-justify">Essa informação vai te ajudar a identificar essa entrega mais tarde.</p>
+            </div>
+  
+            <div class="flex-auto flex flex-col">
+              <label class="mb-2" for="">Modalidade de Venda</label>
+              <select
+                class="bg-[#141414] h-11 text-[#fff] outline-none border border-[#141414] rounded py-2 px-2  focus:border-pink1 w-48"
+                name="theme"
+              >
+                <option class="text-grayC1" value="venda unica">Venda única</option>
+                <option class="text-grayC1" value="Assinatura">Assinatura</option>
+              </select>
+            </div>
+
+          </div>
+
+          <div class="flex flex-col">
+            <label class="mb-2" for="">Código do Produto ou Plano</label>
+            <textarea class="bg-[#121212] h-12 outline-none border border-[#121212] rounded py-2 px-3 text-white-700 focus:border-pink1 w-full" name="" id="" cols="30" rows="10"></textarea>
+            <p class="text-gray81 mt-3 mb-5 text-justify">Para múltiplos identificadores use (ponto e vírgula), Exemplo: 001;002;003</p>
+          </div>
+
+          <div class="flex flex-col">
+            <label class="mb-2" for="">URL Postback - <span class="font-bold">Kiwify</span></label>
+            <div class="flex flex-row">
+              <input
+                  class="bg-[#121212] h-12 outline-none border border-[#121212] rounded-l py-2 px-3 text-white-700 focus:border-pink1 w-full"
+                  type="text">
+                  <div class="bg-[#363739] p-3 rounded-r hover:bg-pink-700 hover:cursor-pointer">
+                    <i class="fa fa-copy text"></i>
+                  </div>
+            </div>
+                <p class="text-gray81 mt-3 mb-5 text-justify">Para múltiplos identificadores use (ponto e vírgula), Exemplo: 001;002;003</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <table class="table-fixed mt-10 rounded px-5 py-3">
+        <tr class="bg-[#0a0a0a] text-left text-grayC1">
+          <th class="w-1/9 font-light tracking-wide text-xs border-b border-divider px-3 py-2">SELECIONAR</th>
+          <th class="w-2/3 font-light tracking-wide text-xs border-b border-divider px-3 py-2">CONTEÚDO</th>
+          <th class="w-1/6 font-light tracking-wide text-xs border-b border-divider px-3 py-2">TEMPO DE ACESSO</th>
+          <th class="w-1/9 font-light tracking-wide text-xs border-b border-divider px-3 py-2">LIBERAÇÃO</th>
+        </tr>
+        <tr class="bg-[#141414]">
+          <td class="text-[#868686] px-3 py-3">
+              <div class="form-check form-switch text-left">
+                <input
+                  class="form-check-input appearance-none w-9 rounded-full h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-700 focus:outline-none cursor-pointer shadow-sm"
+                  type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+              </div>
+          </td>
+          <td class="text-[#868686] px-3 py-3">Acesso completo a <span class="font-bold">todos produtos</span></td>
+          <td class="text-[#868686] px-3 py-3">
+            <select
+              class="bg-[#141414] text-grayC1 outline-none border border-[#141414] rounded py-2 px-2  focus:border-pink1 w-48"
+              name="theme"
+              disabled
+            >
+              <option class="text-grayC1" value="Direita">acesso vitalício</option>
+              <option class="text-grayC1" value="Anos">Anos</option>
+              <option class="text-grayC1" value="Meses">Meses</option>
+              <option class="text-grayC1" value="Semanas">Semanas</option>
+              <option class="text-grayC1" value="Dias">Dias</option>
+              <option class="text-grayC1" value="Horas">Horas</option>
+            </select>
+          </td>
+          <td class="text-[#868686] px-3 py-3 w-full">&nbsp;</td>
+        </tr>
+        <tr class="bg-[#1e1e1e]">
+          <td class="text-[#868686] px-3 py-3">
+              <div class="form-check form-switch text-left">
+                <input
+                  class="form-check-input appearance-none w-9 rounded-full h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-700 focus:outline-none cursor-pointer shadow-sm"
+                  type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+              </div>
+          </td>
+          <td class="text-[#868686] px-3 py-3">Todos os produtos da Vitrine. <span class="font-bold">Produtos Lucrativos - Assinatura de Produtos Vencedores</span></td>
+          <td class="text-[#868686] px-3 py-3">
+            <select
+              class="bg-[#141414] text-grayC1 outline-none border border-[#141414] rounded py-2 px-2  focus:border-pink1 w-48"
+              name="theme"
+              disabled
+            >
+              <option class="text-grayC1" value="Direita">acesso vitalício</option>
+              <option class="text-grayC1" value="Anos">Anos</option>
+              <option class="text-grayC1" value="Meses">Meses</option>
+              <option class="text-grayC1" value="Semanas">Semanas</option>
+              <option class="text-grayC1" value="Dias">Dias</option>
+              <option class="text-grayC1" value="Horas">Horas</option>
+            </select>
+          </td>
+          <td class="text-[#868686] px-3 py-3 w-full">&nbsp;</td>
+        </tr>
+        <tr class="bg-[#141414]">
+          <td class="text-[#868686] px-3 py-3">
+              <div class="form-check form-switch text-left">
+                <input
+                  class="form-check-input appearance-none w-9 rounded-full h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-700 focus:outline-none cursor-pointer shadow-sm"
+                  type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+              </div>
+          </td>
+          <td class="text-[#868686] px-3 py-3">Produtos Lucrativos</td>
+          <td class="text-[#868686] px-3 py-3">
+            <select
+              class="bg-[#141414] text-grayC1 outline-none border border-[#141414] rounded py-2 px-2  focus:border-pink1 w-48"
+              name="theme"
+              disabled
+            >
+              <option class="text-grayC1" value="Direita">acesso vitalício</option>
+              <option class="text-grayC1" value="Anos">Anos</option>
+              <option class="text-grayC1" value="Meses">Meses</option>
+              <option class="text-grayC1" value="Semanas">Semanas</option>
+              <option class="text-grayC1" value="Dias">Dias</option>
+              <option class="text-grayC1" value="Horas">Horas</option>
+            </select>
+          </td>
+          <td class="text-[#868686] px-3 py-3 w-full">
+            <select
+              class="bg-[#141414] text-grayC1 outline-none border border-[#141414] rounded py-2 px-2  focus:border-pink1 w-48"
+              name="theme"
+              disabled
+            >
+              <option class="text-grayC1" value="none">-</option>
+              <option class="text-grayC1" value="mineracao">Mineração On</option>
+            </select>
+          </td>
+        </tr>
+    </table>
+
+    <table class="table-fixed mt-10 border-spacing-0 rounded-lg px-5 py-3">
+      <tr class="bg-[#0a0a0a] text-left rounded-lg text-grayC1">
+        <th class="w-1/9 font-light tracking-wide text-xs border-b border-divider px-3 py-2">SELECIONAR</th>
+        <th class="w-2/3 font-light tracking-wide text-xs border-b border-divider px-3 py-2">CONTEÚDO</th>
+        <th class="w-1/6 font-light tracking-wide text-xs border-b border-divider px-3 py-2">TEMPO DE ACESSO</th>
+        <th class="w-1/9 font-light tracking-wide text-xs border-b border-divider px-3 py-2">LIBERAÇÃO</th>
+      </tr>
+      <tr class="bg-[#141414]">
+        <td class="text-[#fff] px-3 py-3">
+            <div class="form-check form-switch text-left">
+              <input
+                class="form-check-input appearance-none w-9 rounded-full h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-700 focus:outline-none cursor-pointer shadow-sm"
+                type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+            </div>
+        </td>
+        <td class="text-[#fff] px-3 py-3">Acesso completo a <span class="font-bold">todos produtos</span></td>
+        <td class="text-[#fff] px-3 py-3">
+          <select
+            class="bg-[#141414] text-[#fff] outline-none border border-[#141414] rounded py-2 px-2  focus:border-pink1 w-48"
+            name="theme"
+          >
+            <option class="text-grayC1" value="Direita">acesso vitalício</option>
+            <option class="text-grayC1" value="Anos">Anos</option>
+            <option class="text-grayC1" value="Meses">Meses</option>
+            <option class="text-grayC1" value="Semanas">Semanas</option>
+            <option class="text-grayC1" value="Dias">Dias</option>
+            <option class="text-grayC1" value="Horas">Horas</option>
+          </select>
+        </td>
+        <td class="text-[#fff] px-3 py-3 w-full">&nbsp;</td>
+      </tr>
+      <tr class="bg-[#1e1e1e]">
+        <td class="text-[#fff] px-3 py-3 text-center">
+            <div class="form-check form-switch text-left">
+              <input
+                class="form-check-input appearance-none w-9 rounded-full h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-700 focus:outline-none cursor-pointer shadow-sm"
+                type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+            </div>
+        </td>
+        <td class="text-[#fff] px-3 py-3">Todos os produtos da Vitrine. <span class="font-bold">Produtos Lucrativos - Assinatura de Produtos Vencedores</span></td>
+        <td class="text-[#fff] px-3 py-3">
+          <select
+            class="bg-[#141414] text-[#fff] outline-none border border-[#141414] rounded py-2 px-2  focus:border-pink1 w-48"
+            name="theme"
+          >
+            <option class="text-grayC1" value="Direita">acesso vitalício</option>
+            <option class="text-grayC1" value="Anos">Anos</option>
+            <option class="text-grayC1" value="Meses">Meses</option>
+            <option class="text-grayC1" value="Semanas">Semanas</option>
+            <option class="text-grayC1" value="Dias">Dias</option>
+            <option class="text-grayC1" value="Horas">Horas</option>
+          </select>
+        </td>
+        <td class="text-[#fff] px-3 py-3 w-full">&nbsp;</td>
+      </tr>
+      <tr class="bg-[#141414]">
+        <td class="text-[#fff] px-3 py-3">
+            <div class="form-check form-switch text-left">
+              <input
+                class="form-check-input appearance-none w-9 rounded-full h-5 align-top bg-white bg-no-repeat bg-contain bg-pink-700 focus:outline-none cursor-pointer shadow-sm"
+                type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+            </div>
+        </td>
+        <td class="text-[#fff] px-3 py-3">Produtos Lucrativos</td>
+        <td class="text-[#fff] px-3 py-3">
+          <select
+            class="bg-[#141414] text-[#fff] outline-none border border-[#141414] rounded py-2 px-2  focus:border-pink1 w-48"
+            name="theme"
+          >
+            <option class="text-grayC1" value="Direita">acesso vitalício</option>
+            <option class="text-grayC1" value="Anos">Anos</option>
+            <option class="text-grayC1" value="Meses">Meses</option>
+            <option class="text-grayC1" value="Semanas">Semanas</option>
+            <option class="text-grayC1" value="Dias">Dias</option>
+            <option class="text-grayC1" value="Horas">Horas</option>
+          </select>
+        </td>
+        <td class="text-[#fff] px-3 py-3 w-full">
+          <select
+            class="bg-[#141414] text-[#fff] outline-none border border-[#141414] rounded py-2 px-2  focus:border-pink1 w-48"
+            name="theme"
+          >
+            <option class="text-grayC1" value="none">-</option>
+            <option class="text-grayC1" value="mineracao">Mineração On</option>
+          </select>
+        </td>
+      </tr>
+  </table>
+</body>
+</html>
